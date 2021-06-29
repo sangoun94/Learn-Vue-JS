@@ -8,6 +8,8 @@
 </head>
 <body>
     <div id="app">
+        <router-link to="/login">Login</router-link>
+        <router-link to="/main">Main</router-link>
         <router-view></router-view>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
@@ -21,6 +23,7 @@
                 {   
                     // 페이지의 url 이름
                     path: '/login',
+                    name: 'login',
                     // 해당 url에서 표시될 component
                     component: LoginComponent
                 },
@@ -34,7 +37,6 @@
         new Vue({
             el: '#app',
             router: router
-
         });
     </script>
 </body>
